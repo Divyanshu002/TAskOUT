@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hi Love❤️</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 id="hiLove">Hi Love❤️</h1>
+            <p id="intro"><strong>Nandini</strong> ❤️</p>
+            <p id="questionIntro">I have something important to say to you...</p>
+            <button id="proceedButton" onclick="showCompliments()">Proceed</button>
+        </header>
+        
+        <div id="notification-popup">
+            <p>Psst! tap that music note in the top right corner</p>
+            <button onclick="closeNotification()">Got it!</button>
+        </div>
+        
+                 
+        <div class="compliments-container" style="display: none;">
+            <p class="compliment">I'm seriously on cloud nine thinking about meeting you soon😊</p>
+            <p class="compliment">Can't wait to share some laughs and make sweet memories with you💖 </p>
+            <p class="compliment">See you super soon🚀</p>
+            <button id="proceedToQuestionsButton" onclick="showQuestions()">Proceed to Questions</button>
+        </div>
+
+        <div class="questions-container" style="display: none;">
+            <div id="question1" class="question">
+                <p>Would you like to grab a cozy coffee with me?</p>
+                <button onclick="answerQuestion('Yes 😊', 'question1', 'question2')">Yes</button>
+                <button onclick="disableButton('No 😔', 'Sorry, this button is disabled. Please click \'Yes\' to continue.', 'noButton1')">No</button>
+                <p class="compliment">Your company would turn a simple coffee into the highlight of my day ☕️💕 What do you say?</p>
+            </div>
+
+            <div id="question2" class="question" style="display: none;">
+                <p>Would picking flowers together be something you're interested in?</p>
+                <button onclick="answerQuestion('Yes 😊', 'question2', 'question3')">Yes</button>
+                <button onclick="disableButton('No 😔', 'Sorry, this button is disabled. Please click \'Yes\' to continue.', 'noButton2')">No</button>
+                <p class="compliment">Your company in a flower field? That sounds like a dream 🌼💕 What do you think, flower-picking partner?</p>
+            </div>
+
+            <div id="question3" class="question" style="display: none;">
+                <p>Would you make my day and go on a date with me?</p>
+                <button onclick="answerQuestion('Yes 😊', 'question3', 'question4')">Yes</button>
+                <button onclick="disableButton('No 😔', 'Sorry, this button is disabled. Please click \'Yes\' to continue.', 'noButton3')">No</button>
+                <p class="compliment">I've been looking forward to this, and your yes would mean the world to me 🌍</p>
+            </div>
+            <p class="love-you" style="display: none;">Love you! <span class="heartbeat">❤️</span></p>
+
+            <!-- Add more questions as needed -->
+
+        </div>
+        
+        <div id="response-container">
+            <!-- Response will be displayed here -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Made with <span class="heartbeat">❤️</span> by <strong>Divyanshu</strong></p>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="Steal My Girl.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+    
+    <button id="toggleButton" onclick="toggleMusic()">🎵</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
